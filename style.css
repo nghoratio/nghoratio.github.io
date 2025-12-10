@@ -12,6 +12,28 @@
             position: relative;
         }
 
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1.5vw;
+            background-color: transparent;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+        nav ul li{
+            padding: 1vw 1.3vw;
+            cursor: pointer;
+        }
+        nav div button{
+            padding: 0.7vw 1.1vw;
+            border-radius: 0.2vw;
+            border: none;
+        }
+
         /* ============================================
            AURORES BORÉALES EN CSS
         ============================================ */
@@ -261,13 +283,47 @@
             padding: 50px 20px;
         }
 
+        .sections{
+            display: flex;
+            flex-direction: row;
+        }
+        .sections div{
+            width: 40vw;
+            margin: 1vw;
+        }
+
         .hero {
-            height: 100vh;
+            height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+        }
+        
+        #services{
+            padding: 1.5vw 1.8vw;
+        }
+
+        #services h2{
+            text-align: center;
+            padding: 3vh;
+        }
+
+        #services table tr td{
+            text-align: center;
+        }
+
+        .cit{
+            margin: 3vw 2vh;
+            text-align: center;
+        }
+
+        #list_project{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1.5vw;
         }
 
         h1 {
