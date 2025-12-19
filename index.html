@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="assets/Fonts/Manrope-VariableFont_wght.ttf">
+    <link rel="preconnect" href="assets/Fonts/SpaceGrotesk-VariableFont_wght.ttf">
+    <link rel="preconnect" href="assets/Fonts/Unbounded-VariableFont_wght.ttf">
     <title>Horatio NGUEND</title>
 </head>
 <body>
     <nav>
-        <h2>N_HB</h1>
+        <h2 class="Space_Grotesk">N_HB</h2>
         <ul>
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Expertise</li>
-            <li>Projects</li>
+            <li class="Manrope"><a href="#" class="link">Home</a></li>
+            <li class="Manrope"><a href="#about_me" class="link">About Me</a></li>
+            <li class="Manrope"><a href="#expert" class="link">Compétences</a></li>
+            <li class="Manrope"><a href="#projects" class="link">Projects</a></li>
+            <li class="Manrope"><a href="#services" class="link">Services</a></li>
         </ul>
         <div>
-            <button>Contact</button>
-            
+            <button class="Manrope">Contact</button>
         </div>
     </nav>
+    
     <!-- Aurores boréales -->
     <div class="aurora-container">
         <div class="aurora aurora-1"></div>
@@ -37,143 +41,141 @@
     <!-- Contenu du site -->
     <div class="content">
         <section class="hero">
-            <h1>Horatio NGUEND</h1>
-            <p class="subtitle">Développeur Full Stack Junior</p>
-            <button>Mes Projets</button>
-            <button>A propos de Moi</button>
-            <div class="scroll-indicator">↓ Scroll pour voir l'effet parallaxe ↓</div>
+            <h1 class="Space_Grotesk">Horatio NGUEND</h1>
+            <p class="subtitle Manrope">Développeur web passionné · Freelance</p>
+            <div class="btn-group">
+                <button class="Manrope">Mes projets</button>
+                <button class="Manrope">Télécharger CV →</button>
+            </div>
+            <!-- <div class="scroll-indicator Manrope">↓ Scroll pour voir l'effet parallaxe ↓</div> -->
         </section>
 
-        <section class="sections">
+        <section class="sections" id="about_me">
             <div>
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptatibus culpa. Voluptatem voluptate corrupti tenetur suscipit, tempora nam dolorum accusamus, pariatur nisi ducimus laudantium dolore amet ex eveniet. Cum, facere?
-                Nobis alias tenetur neque facilis, delectus in amet illo maxime? Fuga, fugit. Sapiente, maxime possimus, magnam quae ea est, reprehenderit id ad quidem ipsa aut totam rem. Fuga, itaque laudantium.
-                Molestias dicta, temporibus architecto cumque dolorum voluptatem quisquam numquam cum exercitationem omnis iure perspiciatis atque nesciunt provident ad, fuga quis quaerat deserunt excepturi quo! Aperiam incidunt voluptates illum velit excepturi?</p>
+                <h2 class="Space_Grotesk">About Me</h2>
+                <p class="Manrope bold">Développeur web junior passionné avec 2 ans d'expérience dans la création de solutions digitales sur mesure. Mon parcours a débuté par une formation académique en développement web, avant de poursuivre en autodidacte à travers des stages, des projets personnels et une soif constante d'apprendre.</p>
+                <p class="Manrope bold">Ce qui me motive chaque jour ? Créer des solutions digitales concrètes qui résolvent les problèmes du quotidien. J'aime me sentir utile et voir mes créations avoir un réel impact sur la vie de leurs utilisateurs. Ma spécialité : concevoir des sites vitrines, landing pages et sites web sur mesure qui allient esthétique et performance.</p>
+                <p class="Manrope bolder italic">Actuellement ouvert aux missions freelance, collaborations et opportunités de stage.</p>
             </div>
-            <div class="imgsimp">
+            <div class="imgsimp Manrope">
                 jdsfds
                 <img src="" alt="">
             </div>
         </section>
 
-        <section class="sections">
-            <div class="imgsimp">
-                jdsfds
-                <img src="" alt="">
-            </div>
+        <section class="box sections" id="expert">
             <div>
-                <h2>Mon Expertise</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptatibus culpa. Voluptatem voluptate corrupti tenetur suscipit, tempora nam dolorum accusamus, pariatur nisi ducimus laudantium dolore amet ex eveniet. Cum, facere?
-                Nobis alias tenetur neque facilis, delectus in amet illo maxime? Fuga, fugit. Sapiente, maxime possimus, magnam quae ea est, reprehenderit id ad quidem ipsa aut totam rem. Fuga, itaque laudantium.
-                Molestias dicta, temporibus architecto cumque dolorum voluptatem quisquam numquam cum exercitationem omnis iure perspiciatis atque nesciunt provident ad, fuga quis quaerat deserunt excepturi quo! Aperiam incidunt voluptates illum velit excepturi?</p>
+                <h2 class="Space_Grotesk">Mes Compétences</h2>
+                <h3 class="Manrope">Front-End</h3>
+                <ul class="icon-list">
+                    <li><img src="assets/icons/icons8-html-5-96.png" alt="HTML5" class="icon"><h4>HTML</h4></li>
+                    <li><img src="assets/icons/icons8-css3-100.png" alt="CSS5" class="icon"><h4>CSS</h4></li>
+                    <li><img src="assets/icons/icons8-javascript-240.png" alt="JavaScript" class="icon"><h4>JavaScript</h4></li>
+                    <li><img src="assets/icons/icons8-react-natif-68.png" alt="React Native" class="icon"><h4>ReactJS</h4></li>
+                    <li><img src="assets/icons/icons8-vent-arrièrecss-480.png" alt="Tailwind CSS" class="icon"><h4>TailwindCSS</h4></li>
+                </ul>
+                <h3 class="Manrope">Back-End</h3>
+                <ul class="icon-list">
+                    <li><img src="assets/icons/icons8-php-96 (1).png" alt="PHP" class="icon"><h4>PHP</h4></li>
+                    <li><img src="assets/icons/icons8-mysql-96.png" alt="MySQL" class="icon"><h4>MySQL</h4></li>
+                    <li><img src="assets/icons/icons8-nœud-js-100.png" alt="Node.js" class="icon"><h4>NodeJS</h4></li>
+                    <li><img src="assets/icons/icons8-python-480.png" alt="Python" class="icon"><h4>Python</h4></li>
+                </ul>
+                <h3 class="Manrope">Outils</h3>
+                <ul class="icon-list">
+                    <li><img src="assets/icons/icons8-figma-480.png" alt="Figma" class="icon"><h4>Figma</h4></li>
+                    <li><img src="assets/icons/icons8-notion-64.png" alt="Notion" class="icon"><h4>Notion</h4></li>
+                    <li><img src="assets/icons/icons8-github-64.png" alt="GitHub" class="icon"><h4>Github</h4></li>
+                    <li><img src="assets/icons/icons8-git-480.png" alt="Git" class="icon"><h4>Git</h4></li>
+                </ul>
             </div> 
         </section>
 
+        <section id="projects">
+            <h2 class="Space_Grotesk">Mes Projets</h2>
+            <div id="list_project">
+                    <div class="project">
+                        <img src="assets/Images/Screenshot 2025-12-18 182754.png" alt="">
+                        <h3 class="Space_Grotesk">Folding House</h3>
+                        <p>Un site vitrine présentant une entreprise de vente de maison capsule</p>
+                        <button class="Manrope">Voir Plus</button>
+                    </div>
+                    <div class="project">
+                        <img src="assets/Images/Screenshot 2025-12-18 182754.png" alt="">
+                        <h3 class="Space_Grotesk">Folding House</h3>
+                        <p>Une Landing Page de vente de maison capsule</p>
+                        <button class="Manrope">Voir Plus</button>
+                    </div>
+                    <div class="project">
+                        <img src="assets/Images/Screenshot 2025-12-18 182754.png" alt="">
+                        <h3 class="Space_Grotesk">Folding House</h3>
+                        <p>Une Landing Page de vente de maison capsule</p>
+                        <button class="Manrope">Voir Plus</button>
+                    </div>
+            </div>
+        </section>
+
         <section id="services">
-            <h2>Mes Services</h2>
+            <h2 class="Space_Grotesk">Mes Services</h2>
             <table>
                 <tr>
                     <td>
-                        <h3>Site vitrine</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi esse mollitia molestias voluptate magni cumque repellat repellendus reiciendis quam sequi, facilis veritatis sed reprehenderit, eum voluptatem blanditiis voluptatum consequuntur?</p>
+                        <h3 class="Space_Grotesk">Site vitrine</h3>
+                        <p class="Manrope">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi esse mollitia molestias voluptate magni cumque repellat repellendus reiciendis quam sequi, facilis veritatis sed reprehenderit, eum voluptatem blanditiis voluptatum consequuntur?</p>
                     </td>
                     <td>
-                        <h3>Site vitrine</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi esse mollitia molestias voluptate magni cumque repellat repellendus reiciendis quam sequi, facilis veritatis sed reprehenderit, eum voluptatem blanditiis voluptatum consequuntur?</p>
+                        <h3 class="Space_Grotesk">Landing Page</h3>
+                        <p class="Manrope">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi esse mollitia molestias voluptate magni cumque repellat repellendus reiciendis quam sequi, facilis veritatis sed reprehenderit, eum voluptatem blanditiis voluptatum consequuntur?</p>
                     </td>
                     <td>
-                        <h3>Site vitrine</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi esse mollitia molestias voluptate magni cumque repellat repellendus reiciendis quam sequi, facilis veritatis sed reprehenderit, eum voluptatem blanditiis voluptatum consequuntur?</p>
+                        <h3 class="Space_Grotesk">Site sur mesure</h3>
+                        <p class="Manrope">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi esse mollitia molestias voluptate magni cumque repellat repellendus reiciendis quam sequi, facilis veritatis sed reprehenderit, eum voluptatem blanditiis voluptatum consequuntur?</p>
                     </td>
                     <td>
-                        <h3>Site vitrine</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi esse mollitia molestias voluptate magni cumque repellat repellendus reiciendis quam sequi, facilis veritatis sed reprehenderit, eum voluptatem blanditiis voluptatum consequuntur?</p>
+                        <h3 class="Space_Grotesk">Refonte de site web</h3>
+                        <p class="Manrope">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi esse mollitia molestias voluptate magni cumque repellat repellendus reiciendis quam sequi, facilis veritatis sed reprehenderit, eum voluptatem blanditiis voluptatum consequuntur?</p>
                     </td>
                 </tr>
             </table>
         </section>
 
-        <section id="projects">
-            <h2>Mes Projets</h2>
-            <div id="list_project">
-                    <div class="project">
-                        <img src="" alt="">
-                        <h3>Landing Page</h3>
-                        <button>Voir Plus</button>
-                    </div>
-                    <div class="project">
-                        <img src="" alt="">
-                        <h3>GDS</h3>
-                        <button>Voir Plus</button>
-                    </div>
-                    <div class="project">
-                        <img src="" alt="">
-                        <h3>Folding House</h3>
-                        <button>Voir Plus</button>
-                    </div>
-            </div>
+        <section class="cit Manrope">
+            <h3>"C'est dans les difficultés que l'on découvre qui l'on est vraiment, et que nos limites deviennent des tremplins."</h3><br> <h2 class="Space_Grotesk">Horatio NGUEND</h2>
         </section>
 
-        <section class="cit">
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero vitae. Quos corrupti molestias ducimus et maiores sequi. Voluptate laudantium eligendi nulla eaque cupiditate, cumque sunt fuga accusantium odit omnis?"<br> <h2>Horatio NGUEND</h2>
-        </section>
-
-        <section id="contact" class="section">
+        <section id="contact" class="section box">
             <div>
-                <h3>Discutons de votre projet</h3>
+                <h3 class="Space_Grotesk">Discutons de votre projet</h3>
             </div>
-            <hr>
             <div>
                 <form action="" method="post">
-                    <input type="text" name="nom" id="" placeholder="Nom">
-                    <input type="text" name="prenom" id="" placeholder="Prenom">
-                    <textarea name="message" cols="20" rows="5" placeholder="Message..."></textarea>
-                    <button type="button">Envoyer</button>
+                    <input type="text" name="nom" id="" placeholder="Nom" class="Manrope">
+                    <input type="text" name="prenom" id="" placeholder="Prenom" class="Manrope">
+                    <textarea name="message" cols="20" rows="5" placeholder="Message..." class="Manrope"></textarea>
+                    <button type="button" class="Manrope">Envoyer</button>
                 </form>
             </div>
         </section>
 
         <footer>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Me</a></li>
-                <li><a href=""><h2>NHB</h2></a></li>
-                <li><a href="">Expertise</a></li>
-                <li><a href="">Projects</a></li>
+                <li><a href="#" class="Manrope">Home</a></li>
+                <li><a href="#about_me" class="Manrope">About Me</a></li>
+                <li><h2 class="Space_Grotesk">NHB</h2></li>
+                <li><a href="#expert" class="Manrope">Expertise</a></li>
+                <li><a href="#projects" class="Manrope">Projects</a></li>
             </ul>
             <hr>
-            <ul>
-                <li><div><a href="">Facebook</a></div></li>
-                <li><div><a href="">Whatsapp</a></div></li>
-                <li><div><a href="">GitHub</a></div></li>
-                <li><div><a href="">Upwork</a></div></li>
-                <li><div><a href="">Fiverr</a></div></li>
+            <ul class="social-links">
+                <li><a href="" class="Manrope"><img src="assets/icons/icons8-gmail-nouveau-100.png" alt="Gmail"></a></li>
+                <li><a href="" class="Manrope"><img src="assets/icons/icons8-whatsapp-500.png" alt="Whatsapp"></a></li>
+                <li><a href="" class="Manrope"><img src="assets/icons/icons8-github-64.png" alt="GitHub"></a></li>
+                <li><a href="" class="Manrope"><img src="assets/icons/icons8-travailler-500.png" alt="Upwork"></a></li>
+                <li><a href="" class="Manrope"><img src="assets/icons/icons8-cinq-500.png" alt="Fiverr"></a></li>
             </ul>
 
-            <h4>@2025 - Tous droits réservés</h4>
+            <h4 class="Manrope">@2025 - Tous droits réservés</h4>
         </footer>
-
-        <section class="section">
-            <div class="box">
-                <h2>About Me</h2>
-                <p>Scrollez pour voir les étoiles bouger à différentes vitesses et créer une profondeur spatiale réaliste. Les trois couches d'étoiles se déplacent indépendamment.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="box">
-                <h2>Mes Services</h2>
-                <p>L'effet de parallaxe donne l'impression de voyager à travers l'espace. Plus vous scrollez, plus l'effet est visible !</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="box">
-                <h2>Mes Projets</h2>
-                <p>Les aurores boréales ondulent en arrière-plan, créant une ambiance astrale et mystique parfaite pour un portfolio moderne.</p>
-            </div>
-        </section>
     </div>
 
     <script src="script.js"></script>

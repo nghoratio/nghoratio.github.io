@@ -7,17 +7,17 @@
         function createStars() {
             // Couche 1 : 150 petites étoiles lointaines
             for (let i = 0; i < 150; i++) {
-                createStar(1, 0.05);
+                createStar(1, 0.2);
             }
 
             // Couche 2 : 80 étoiles moyennes
             for (let i = 0; i < 80; i++) {
-                createStar(2, 0.2);
+                createStar(2, 0.5);
             }
 
             // Couche 3 : 30 grandes étoiles proches
             for (let i = 0; i < 30; i++) {
-                createStar(3, 0.4);
+                createStar(3, 1);
             }
         }
 
