@@ -675,7 +675,7 @@ nav div button:hover::before {
 
 .project::after {
     content: '';
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
