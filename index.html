@@ -3,36 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta description (ESSENTIEL pour Google) -->
     <meta name="description" content="Horatio NGUEND - Développeur web freelance à Douala, Cameroun. Création de sites vitrines, landing pages et applications web sur mesure. Donnez vie à vos projets. Contactez-moi !">  
-    <!-- Auteur -->
     <meta name="author" content="Horatio NGUEND">
 
-    <!-- Open Graph pour Facebook/LinkedIn/WhatsApp -->
     <meta property="og:title" content="Horatio NGUEND - Développeur Web Freelance Douala">
     <meta property="og:description" content="Développeur web passionné spécialisé dans la création de sites vitrines et applications web modernes.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://votredomaine.com">
     <meta property="og:image" content="https://votredomaine.com/assets/Images/og-image.jpg">
-    <!-- Twitter Card -->
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Horatio NGUEND - Développeur Web Freelance Douala">
     <meta name="twitter:description" content="Développeur web passionné spécialisé dans la création de sites vitrines et applications web modernes.">
     <meta name="twitter:image" content="https://votredomaine.com/assets/Images/twitter-card-image.jpg">
 
-    <!-- Favicon (icône dans l'onglet du navigateur) -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
-
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="assets/Fonts/Manrope-VariableFont_wght.ttf">
-    <link rel="preconnect" href="assets/Fonts/SpaceGrotesk-VariableFont_wght.ttf">
-    <link rel="preconnect" href="assets/Fonts/Unbounded-VariableFont_wght.ttf">
+
     <title>Horatio Nguend | Développeur Web à Douala | Sites & Apps</title>
 </head>
 <body>
     <nav>
         <h2 class="Space_Grotesk">N_HB</h2>
-        <ul>
+
+        <!-- Bouton hamburger (visible uniquement sur mobile) -->
+        <button class="nav-toggle Manrope" id="navToggle" aria-label="Ouvrir le menu">☰</button>
+
+        <ul id="navMenu">
             <li class="Manrope"><a href="#" class="link">Home</a></li>
             <li class="Manrope"><a href="#about_me" class="link">About Me</a></li>
             <li class="Manrope"><a href="#expert" class="link">Compétences</a></li>
@@ -51,7 +48,7 @@
         <div class="aurora aurora-3"></div>
     </div>
 
-    <!-- Conteneur des étoiles -->
+    <!-- Étoiles -->
     <div class="stars-container" id="starsContainer"></div>
 
     <!-- Particules interactives -->
@@ -60,6 +57,8 @@
 
     <!-- Contenu du site -->
     <div class="content">
+
+        <!-- HERO -->
         <section class="hero">
             <h1 class="Space_Grotesk">Horatio NGUEND</h1>
             <p class="subtitle Manrope">Développeur web passionné · Freelance</p>
@@ -67,9 +66,9 @@
                 <button class="Manrope">Mes projets</button>
                 <button class="Manrope">Télécharger CV →</button>
             </div>
-            <!-- <div class="scroll-indicator Manrope">↓ Scroll pour voir l'effet parallaxe ↓</div> -->
         </section>
 
+        <!-- ABOUT ME -->
         <section class="sections" id="about_me">
             <div>
                 <h2 class="Space_Grotesk">About Me</h2>
@@ -78,64 +77,65 @@
                 <p class="Manrope bolder italic">Actuellement <strong>disponible pour missions freelance</strong>, collaborations et opportunités de stage à Douala et partout au Cameroun.</p>
             </div>
             <div class="imgsimp Manrope">
-                jdsfds
-                <!-- Exemple dans About Me -->
                 <img src="assets/Images/profile.jpg" alt="Horatio NGUEND - Développeur Web Freelance à Douala">
             </div>
         </section>
 
+        <!-- COMPÉTENCES -->
         <section class="box sections" id="expert">
             <div>
                 <h2 class="Space_Grotesk">Mes Compétences Techniques en Développement Web</h2>
                 <h3 class="Manrope">Front-End</h3>
                 <ul class="icon-list">
-                    <li><img src="assets/icons/icons8-html-5-96.png" alt="Logo HTML5 - Compétence développement web" class="icon" loading="lazy"><h4>HTML</h4></li>
-                    <li><img src="assets/icons/icons8-css3-100.png" alt="Logo CSS3 - Compétence design web" class="icon" loading="lazy"><h4>CSS</h4></li>
-                    <li><img src="assets/icons/icons8-javascript-240.png" alt="Logo JavaScript - Compétence Front-End" class="icon" loading="lazy"><h4>JavaScript</h4></li>
-                    <li><img src="assets/icons/icons8-react-natif-68.png" alt="Logo React Native - Compétence Front-End" class="icon" loading="lazy"><h4>ReactJS</h4></li>
-                    <li><img src="assets/icons/icons8-vent-arrièrecss-480.png" alt="Logo Tailwind CSS - Compétence design Front-End" class="icon" loading="lazy"><h4>TailwindCSS</h4></li>
+                    <li><img src="assets/icons/icons8-html-5-96.png" alt="HTML5" class="icon" loading="lazy"><h4>HTML</h4></li>
+                    <li><img src="assets/icons/icons8-css3-100.png" alt="CSS3" class="icon" loading="lazy"><h4>CSS</h4></li>
+                    <li><img src="assets/icons/icons8-javascript-240.png" alt="JavaScript" class="icon" loading="lazy"><h4>JavaScript</h4></li>
+                    <li><img src="assets/icons/icons8-react-natif-68.png" alt="React" class="icon" loading="lazy"><h4>ReactJS</h4></li>
+                    <li><img src="assets/icons/icons8-vent-arrièrecss-480.png" alt="Tailwind CSS" class="icon" loading="lazy"><h4>Tailwind</h4></li>
                 </ul>
                 <h3 class="Manrope">Back-End</h3>
                 <ul class="icon-list">
-                    <li><img src="assets/icons/icons8-php-96 (1).png" alt="Logo PHP - Compétence Back-End" class="icon" loading="lazy"><h4>PHP</h4></li>
-                    <li><img src="assets/icons/icons8-mysql-96.png" alt="Logo MySQL - Compétence Back-End" class="icon" loading="lazy"><h4>MySQL</h4></li>
-                    <li><img src="assets/icons/icons8-nœud-js-100.png" alt="Logo Node.js - Compétence Back-End" class="icon" loading="lazy"><h4>NodeJS</h4></li>
-                    <li><img src="assets/icons/icons8-python-480.png" alt="Logo Python - Compétence Back-End" class="icon" loading="lazy"><h4>Python</h4></li>
+                    <li><img src="assets/icons/icons8-php-96 (1).png" alt="PHP" class="icon" loading="lazy"><h4>PHP</h4></li>
+                    <li><img src="assets/icons/icons8-mysql-96.png" alt="MySQL" class="icon" loading="lazy"><h4>MySQL</h4></li>
+                    <li><img src="assets/icons/icons8-nœud-js-100.png" alt="Node.js" class="icon" loading="lazy"><h4>NodeJS</h4></li>
+                    <li><img src="assets/icons/icons8-python-480.png" alt="Python" class="icon" loading="lazy"><h4>Python</h4></li>
                 </ul>
                 <h3 class="Manrope">Outils</h3>
                 <ul class="icon-list">
-                    <li><img src="assets/icons/icons8-figma-480.png" alt="Logo Figma - Outil de design" class="icon" loading="lazy"><h4>Figma</h4></li>
-                    <li><img src="assets/icons/icons8-notion-64.png" alt="Logo Notion - Outil de productivité" class="icon" loading="lazy"><h4>Notion</h4></li>
-                    <li><img src="assets/icons/icons8-github-64.png" alt="Logo GitHub - Outil de gestion de code" class="icon" loading="lazy"><h4>Github</h4></li>
-                    <li><img src="assets/icons/icons8-git-480.png" alt="Logo Git - Outil de gestion de version" class="icon" loading="lazy"><h4>Git</h4></li>
+                    <li><img src="assets/icons/icons8-figma-480.png" alt="Figma" class="icon" loading="lazy"><h4>Figma</h4></li>
+                    <li><img src="assets/icons/icons8-notion-64.png" alt="Notion" class="icon" loading="lazy"><h4>Notion</h4></li>
+                    <li><img src="assets/icons/icons8-github-64.png" alt="GitHub" class="icon" loading="lazy"><h4>GitHub</h4></li>
+                    <li><img src="assets/icons/icons8-git-480.png" alt="Git" class="icon" loading="lazy"><h4>Git</h4></li>
                 </ul>
             </div> 
         </section>
 
+        <!-- PROJETS -->
         <section id="projects">
             <h2 class="Space_Grotesk">Portfolio - Mes Projets Web</h2>
             <div id="list_project">
-                    <div class="project">
-                        <img src="assets/Images/Screenshot 2025-12-18 182754.png" alt="Capture d'écran du site vitrine Folding House - Projet web responsive" loading="lazy">
-                        <h3 class="Space_Grotesk">Folding House</h3>
-                        <p>Site vitrine moderne et responsive pour une entreprise de vente de maisons capsules. Design épuré, animations fluides et interface utilisateur optimisée pour maximiser les conversions.</p>
-                        <button class="Manrope">Voir Plus</button>
-                    </div>
-                    <div class="project">
-                        <img src="assets/Images/Screenshot 2025-12-18 182754.png" alt="Capture d'écran du site vitrine Folding House - Projet web responsive" loading="lazy">
-                        <h3 class="Space_Grotesk">Folding House</h3>
-                        <p>Landing page à haute conversion pour la vente de maisons capsules. Design persuasif, call-to-actions stratégiques et formulaires de contact intégrés pour maximiser les leads.</p>
-                        <button class="Manrope">Voir Plus</button>
-                    </div>
-                    <div class="project">
-                        <img src="assets/Images/Screenshot 2025-12-18 182754.png" alt="Capture d'écran du site vitrine Folding House - Projet web responsive" loading="lazy">
-                        <h3 class="Space_Grotesk">Application Web Personnalisée</h3>
-                        <p>Solution web développée sur mesure pour répondre aux besoins spécifiques du client. Architecture scalable, interface intuitive et intégration de fonctionnalités avancées.</p>
-                        <button class="Manrope"><a href="google.com">Voir Plus</a></button>
-                    </div>
+                <div class="project">
+                    <img src="assets/Images/Screenshot 2025-12-18 182754.png" alt="Site vitrine Folding House" loading="lazy">
+                    <h3 class="Space_Grotesk">Folding House <br> Landing Page</h3>
+                    <p>Landing page moderne dédiée à la vente de maisons modulaires et pliables. Conception orientée produit avec une présentation immersive des caractéristiques techniques, une mise en avant des avantages de mobilité et une architecture pensée pour convertir les visiteurs en prospects qualifiés.</p>
+                    <a href="https://foldinghouse.site/" target="_blank"><button class="Manrope">Voir Plus</button></a>
+                </div>
+                <div class="project">
+                    <img src="assets/Images/Screenshot 2026-02-17 220123.png" alt="Landing page Folding House" loading="lazy">
+                    <h3 class="Space_Grotesk">Destockage Alimentaire <br> E-commerce</h3>
+                    <p>Plateforme de vente en ligne spécialisée dans le déstockage alimentaire à prix réduits. Interface utilisateur optimisée pour la navigation par catégories, système de panier fluide et mise en avant stratégique des promotions pour favoriser l'achat immédiat et la lutte contre le gaspillage.</p>
+                    <a href="https://destockagealimentaireprixmini.com/" target="_blank"><button class="Manrope">Voir Plus</button></a>
+                </div>
+                <div class="project">
+                    <img src="assets/Images/Screenshot 2025-12-18 182754.png" alt="Application Web Personnalisée" loading="lazy">
+                    <h3 class="Space_Grotesk">Application Web Sur Mesure</h3>
+                    <p>Solution web développée sur mesure pour répondre aux besoins spécifiques du client. Architecture scalable, interface intuitive et intégration de fonctionnalités avancées.</p>
+                    <a href="google.com" target="_blank"><button class="Manrope">Voir Plus</button></a>
+                </div>
             </div>
         </section>
 
+        <!-- SERVICES -->
         <section id="services">
             <h2 class="Space_Grotesk">Mes Services de Développement Web</h2>
             <table>
@@ -154,29 +154,38 @@
                     </td>
                     <td>
                         <h3 class="Space_Grotesk">Refonte & Optimisation de Site</h3>
-z                    </td>
+                        <p class="Manrope">Donnez un second souffle à votre site existant. <strong>Refonte visuelle moderne</strong>, amélioration des performances, optimisation SEO et mobile pour booster votre visibilité et vos résultats.</p>
+                    </td>
                 </tr>
             </table>
         </section>
 
+        <!-- CITATION -->
         <section class="cit Manrope">
-            <h3>"C'est dans les difficultés que l'on découvre qui l'on est vraiment, et que nos limites deviennent des tremplins."</h3><br> <h2 class="Space_Grotesk">Horatio NGUEND</h2>
+            <h3>"C'est dans les difficultés que l'on découvre qui l'on est vraiment, et que nos limites deviennent des tremplins."</h3>
+            <h2 class="Space_Grotesk">— Horatio NGUEND</h2>
         </section>
 
+        <!-- CONTACT -->
         <section id="contact" class="section box">
             <div>
                 <h3 class="Space_Grotesk">Discutons de votre projet</h3>
             </div>
             <div>
                 <form action="" method="post">
-                    <input type="text" name="nom" id="" placeholder="Nom" class="Manrope">
-                    <input type="text" name="prenom" id="" placeholder="Prenom" class="Manrope">
-                    <textarea name="message" cols="20" rows="5" placeholder="Message..." class="Manrope"></textarea>
-                    <button type="button" class="Manrope">Envoyer</button>
+                    <!-- Nom & Prénom côte à côte sur desktop, empilés sur mobile -->
+                    <div class="form-row">
+                        <input type="text" name="nom" placeholder="Nom" class="Manrope" required>
+                        <input type="text" name="prenom" placeholder="Prénom" class="Manrope" required>
+                    </div>
+                    <input type="email" name="email" placeholder="Email" class="Manrope" required>
+                    <textarea name="message" rows="5" placeholder="Votre message..." class="Manrope" required></textarea>
+                    <button type="button" class="Manrope">Envoyer →</button>
                 </form>
             </div>
         </section>
 
+        <!-- FOOTER -->
         <footer>
             <ul>
                 <li><a href="#" class="Manrope">Home</a></li>
@@ -187,17 +196,197 @@ z                    </td>
             </ul>
             <hr>
             <ul class="social-links">
-                <li><a href="" class="Manrope"><img src="assets/icons/icons8-gmail-nouveau-100.png" alt="Gmail" loading="lazy"></a></li>
-                <li><a href="" class="Manrope"><img src="assets/icons/icons8-whatsapp-500.png" alt="Whatsapp" loading="lazy"></a></li>
-                <li><a href="" class="Manrope"><img src="assets/icons/icons8-github-64.png" alt="GitHub" loading="lazy"></a></li>
-                <li><a href="" class="Manrope"><img src="assets/icons/icons8-travailler-500.png" alt="Upwork" loading="lazy"></a></li>
-                <li><a href="" class="Manrope"><img src="assets/icons/icons8-cinq-500.png" alt="Fiverr" loading="lazy"></a></li>
+                <li><a href="" aria-label="Gmail"><img src="assets/icons/icons8-gmail-nouveau-100.png" alt="Gmail" loading="lazy"></a></li>
+                <li><a href="" aria-label="WhatsApp"><img src="assets/icons/icons8-whatsapp-500.png" alt="WhatsApp" loading="lazy"></a></li>
+                <li><a href="" aria-label="GitHub"><img src="assets/icons/icons8-github-64.png" alt="GitHub" loading="lazy"></a></li>
+                <li><a href="" aria-label="Upwork"><img src="assets/icons/icons8-travailler-500.png" alt="Upwork" loading="lazy"></a></li>
+                <li><a href="" aria-label="Fiverr"><img src="assets/icons/icons8-cinq-500.png" alt="Fiverr" loading="lazy"></a></li>
             </ul>
-
-            <h4 class="Manrope">@2025 - Tous droits réservés</h4>
+            <h4 class="Manrope">© 2025 — Tous droits réservés · Horatio NGUEND</h4>
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // ============================================
+        // HAMBURGER MENU
+        // ============================================
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            navToggle.textContent = navMenu.classList.contains('open') ? '✕' : '☰';
+        });
+
+        // Ferme le menu quand on clique sur un lien
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                navToggle.textContent = '☰';
+            });
+        });
+
+        // ============================================
+        // GÉNÉRATION DES ÉTOILES
+        // ============================================
+        const starsContainer = document.getElementById('starsContainer');
+        const stars = [];
+
+        function createStars() {
+            for (let i = 0; i < 150; i++) createStar(1, 0.2);
+            for (let i = 0; i < 80; i++) createStar(2, 0.5);
+            for (let i = 0; i < 30; i++) createStar(3, 1);
+        }
+
+        function createStar(layer, parallaxSpeed) {
+            const star = document.createElement('div');
+            star.className = `star layer-${layer}`;
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            star.style.left = `${x}%`;
+            star.style.top = `${y}%`;
+            star.style.animationDuration = `${2 + Math.random() * 3}s`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            starsContainer.appendChild(star);
+            stars.push({ element: star, initialY: y, parallaxSpeed });
+        }
+
+        // ============================================
+        // PARALLAXE AU SCROLL
+        // ============================================
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollY = window.scrollY;
+                    const windowHeight = window.innerHeight;
+                    stars.forEach(star => {
+                        const offset = scrollY * star.parallaxSpeed;
+                        let finalY = (star.initialY + (offset / windowHeight * 100)) % 200;
+                        if (finalY > 100) finalY -= 200;
+                        star.element.style.transform = `translateY(${finalY}vh)`;
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        createStars();
+
+        // ============================================
+        // PARTICULES INTERACTIVES (desktop seulement)
+        // ============================================
+        const particlesContainer = document.getElementById('particlesContainer');
+        const cursorGlow = document.getElementById('cursorGlow');
+        let particles = [];
+        let lastParticleTime = 0;
+        let mouseX = 0, mouseY = 0;
+
+        // Désactiver les particules sur mobile pour les performances
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+        if (!isMobile) {
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursorGlow.style.left = mouseX + 'px';
+                cursorGlow.style.top = mouseY + 'px';
+                const now = Date.now();
+                if (now - lastParticleTime > 30) {
+                    createParticle(mouseX, mouseY);
+                    lastParticleTime = now;
+                }
+            });
+
+            document.addEventListener('mousedown', () => {
+                cursorGlow.classList.add('active');
+                for (let i = 0; i < 15; i++) {
+                    setTimeout(() => {
+                        const angle = (Math.PI * 2 * i) / 15;
+                        const d = 30 + Math.random() * 20;
+                        createParticle(mouseX + Math.cos(angle) * d, mouseY + Math.sin(angle) * d, true);
+                    }, i * 20);
+                }
+            });
+
+            document.addEventListener('mouseup', () => cursorGlow.classList.remove('active'));
+        } else {
+            cursorGlow.style.display = 'none';
+        }
+
+        function createParticle(x, y, isExplosion = false) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            particlesContainer.appendChild(particle);
+
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = isExplosion ? 2 + Math.random() * 3 : 0.5 + Math.random();
+            const pData = {
+                element: particle,
+                x, y,
+                vx: Math.cos(angle) * velocity,
+                vy: Math.sin(angle) * velocity
+            };
+            particles.push(pData);
+
+            setTimeout(() => {
+                particle.remove();
+                particles = particles.filter(p => p.element !== particle);
+            }, 2000);
+        }
+
+        function animateParticles() {
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                p.vx *= 0.98;
+                p.vy *= 0.98;
+                if (p.element.parentNode) {
+                    p.element.style.left = p.x + 'px';
+                    p.element.style.top = p.y + 'px';
+                }
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        animateParticles();
+
+        // ============================================
+        // SCROLL REVEAL — BOX
+        // ============================================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
+
+        document.querySelectorAll('.box').forEach(box => observer.observe(box));
+
+        // ============================================
+        // GLITCH SUR LES TITRES AU SCROLL
+        // ============================================
+        const titles = document.querySelectorAll('h2');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const isScrolling = Math.abs(scrollTop - lastScrollTop) > 5;
+            if (isScrolling) {
+                const viewportCenter = window.innerHeight / 2 + scrollTop;
+                titles.forEach(title => {
+                    const rect = title.getBoundingClientRect();
+                    const titleY = rect.top + scrollTop;
+                    if (Math.abs(viewportCenter - titleY) < 100) {
+                        title.style.animation = 'glitch 0.3s ease';
+                        setTimeout(() => { title.style.animation = ''; }, 300);
+                    }
+                });
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
 </body>
 </html>
