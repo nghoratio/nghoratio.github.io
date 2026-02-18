@@ -74,31 +74,45 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(10, 10, 10, 0.9);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    padding: 0.55rem 0.75rem 0.55rem 1.25rem;
+    background: rgba(15, 15, 15, 0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    width: min(980px, 92vw);
+    right: auto;
     z-index: 1000;
-    border-bottom: 1px solid rgba(162, 143, 255, 0.2);
-    transition: all 0.3s ease;
-    gap: 1rem;
+    border: 1px solid rgba(162, 143, 255, 0.2);
+    border-radius: 999px;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(162, 89, 255, 0.06);
+    transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.42s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+    gap: 0.5rem;
+}
+
+nav.hidden {
+    transform: translateX(-50%) translateY(-130%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 nav:hover {
-    background: rgba(10, 10, 10, 0.98);
-    border-bottom-color: rgba(162, 143, 255, 0.4);
+    background: rgba(20, 20, 20, 0.95);
+    border-color: rgba(162, 143, 255, 0.35);
 }
 
 nav h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #A259FF;
-    text-shadow: 0 0 20px rgba(162, 89, 255, 0.6);
+    text-shadow: 0 0 16px rgba(162, 89, 255, 0.6);
     margin: 0;
     flex-shrink: 0;
+    padding: 0 0.25rem;
 }
 
 nav h2::after { display: none; }
@@ -107,17 +121,20 @@ nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 0.25rem;
-    flex-wrap: wrap;
+    gap: 0;
+    margin: 0 auto;
+    flex-wrap: nowrap;
 }
 
 nav ul li {
-    padding: 0.5rem 0.75rem;
+    padding: 0.45rem 0.85rem;
     cursor: pointer;
     position: relative;
     color: rgba(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
-    border-radius: 6px;
+    transition: color 0.25s ease, background 0.25s ease;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    white-space: nowrap;
 }
 
 nav ul li::before {
@@ -134,10 +151,10 @@ nav ul li::before {
 
 nav ul li:hover {
     color: #A259FF;
-    background: rgba(162, 89, 255, 0.1);
+    background: rgba(162, 89, 255, 0.12);
 }
 
-nav ul li:hover::before { width: 80%; }
+nav ul li:hover::before { width: 0; }
 
 .link {
     text-decoration: none;
@@ -146,25 +163,40 @@ nav ul li:hover::before { width: 80%; }
 }
 
 nav div button {
-    padding: 0.6rem 1.5rem;
-    border-radius: 6px;
-    border: 2px solid #A259FF;
-    background: transparent;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    border: 1.5px solid rgba(162, 143, 255, 0.45);
+    background: rgba(162, 89, 255, 0.1);
     color: #A259FF;
-    font-weight: bold;
+    font-weight: 600;
     font-family: 'Manrope', sans-serif;
+    font-size: 0.88rem;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
     white-space: nowrap;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+nav div button::after {
+    font-size: 0.9rem;
+    line-height: 1;
+    transition: transform 0.25s ease;
 }
 
 nav div button:hover {
     background: #A259FF;
-    color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 20px rgba(162, 89, 255, 0.6);
+    color: #fff;
+    border-color: #A259FF;
+    box-shadow: 0 0 18px rgba(162, 89, 255, 0.5);
+}
+
+nav div button:hover::after {
+    transform: translate(2px, -2px);
 }
 
 /* Nav hamburger (mobile) */
@@ -356,7 +388,7 @@ nav div button:hover {
 .content {
     position: relative;
     z-index: 10;
-    padding-top: 70px;
+    padding-top: 0;
 }
 
 /* ============================================
@@ -491,7 +523,7 @@ p {
 }
 
 .imgsimp {
-    min-height: 380px;
+    min-height: 450px;
     background: linear-gradient(135deg, rgba(162, 89, 255, 0.2), rgba(191, 33, 159, 0.2));
     border: 2px solid rgba(162, 143, 255, 0.3);
     border-radius: 20px;
@@ -788,19 +820,20 @@ p {
 }
 
 #services table tr td h3::before {
-    content: ""; /* On laisse le contenu vide ici */
+    content: ""; /* Indispensable pour afficher le pseudo-élément */
     display: inline-block;
-    background-image: url(assets/icons/globe.png);
+    width: 50px;
+    height: 50px;
+    background-image: url('assets/icons/globe.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 2rem; 
-    height: 2rem;
-    flex-shrink: 0;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
-#services table tr td:nth-child(2) h3::before { background-image: url(assets/icons/click.png); }
-#services table tr td:nth-child(3) h3::before { background-image: url(assets/icons/cpu.png); }
-#services table tr td:nth-child(4) h3::before { background-image: url(assets/icons/repost.png); }
+#services table tr td:nth-child(2) h3::before { background-image: url('assets/icons/click.png'); }
+#services table tr td:nth-child(3) h3::before { background-image: url('assets/icons/cpu.png'); }
+#services table tr td:nth-child(4) h3::before { background-image: url('assets/icons/repost.png'); }
 
 #services table tr td p {
     color: rgba(255, 255, 255, 0.7);
@@ -1109,23 +1142,36 @@ footer .social-links li a:hover img { filter: brightness(0); }
 
     /* ---- NAV ---- */
     nav {
-        flex-wrap: wrap;
-        padding: 0.75rem 1.25rem;
-        gap: 0.75rem;
+        top: 10px;
+        width: 94vw;
+        padding: 0.6rem 0.75rem;
+        border-radius: 999px;
+        flex-wrap: nowrap;
     }
 
     .nav-toggle {
         display: block;
+        border-radius: 999px;
+        padding: 0.35rem 0.65rem;
     }
 
     nav ul {
         display: none;
         flex-direction: column;
-        width: 100%;
-        order: 4;
-        border-top: 1px solid rgba(162, 143, 255, 0.2);
-        padding-top: 0.75rem;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 92vw;
+        background: rgba(15, 15, 15, 0.96);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(162, 143, 255, 0.25);
+        border-radius: 20px;
+        padding: 0.75rem;
         gap: 0.25rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        order: unset;
     }
 
     nav ul.open {
@@ -1134,12 +1180,13 @@ footer .social-links li a:hover img { filter: brightness(0); }
 
     nav ul li {
         padding: 0.75rem 1rem;
-        border-radius: 8px;
+        border-radius: 12px;
         width: 100%;
+        font-size: 0.95rem;
     }
 
     nav div {
-        display: none; /* masquer bouton Contact sur mobile, il est dans le menu */
+        display: none;
     }
 
     /* ---- HERO ---- */

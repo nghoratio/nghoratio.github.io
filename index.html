@@ -23,7 +23,7 @@
     <title>Horatio Nguend | Développeur Web à Douala | Sites & Apps</title>
 </head>
 <body>
-    <nav>
+    <nav id="mainNav">
         <h2 class="Space_Grotesk">N_HB</h2>
 
         <!-- Bouton hamburger (visible uniquement sur mobile) -->
@@ -77,7 +77,7 @@
                 <p class="Manrope bolder italic">Actuellement <strong>disponible pour missions freelance</strong>, collaborations et opportunités de stage à Douala et partout au Cameroun.</p>
             </div>
             <div class="imgsimp Manrope">
-                <img src="assets/Images/profile.jpg" alt="Horatio NGUEND - Développeur Web Freelance à Douala">
+                <img src="assets/Images/8.jpeg" alt="Horatio NGUEND - Développeur Web Freelance à Douala">
             </div>
         </section>
 
@@ -118,7 +118,7 @@
                     <img src="assets/Images/Screenshot 2025-12-18 182754.png" alt="Site vitrine Folding House" loading="lazy">
                     <h3 class="Space_Grotesk">Folding House <br> Landing Page</h3>
                     <p>Landing page moderne dédiée à la vente de maisons modulaires et pliables. Conception orientée produit avec une présentation immersive des caractéristiques techniques, une mise en avant des avantages de mobilité et une architecture pensée pour convertir les visiteurs en prospects qualifiés.</p>
-                    <a href="https://foldinghouse.site/" target="_blank"><button class="Manrope">Voir Plus</button></a>
+                    <a href="https://foldinghouse.site" target="_blank"><button class="Manrope">Voir Plus</button></a>
                 </div>
                 <div class="project">
                     <img src="assets/Images/Screenshot 2026-02-17 220123.png" alt="Landing page Folding House" loading="lazy">
@@ -130,7 +130,7 @@
                     <img src="assets/Images/Screenshot 2025-12-18 182754.png" alt="Application Web Personnalisée" loading="lazy">
                     <h3 class="Space_Grotesk">Application Web Sur Mesure</h3>
                     <p>Solution web développée sur mesure pour répondre aux besoins spécifiques du client. Architecture scalable, interface intuitive et intégration de fonctionnalités avancées.</p>
-                    <a href="google.com" target="_blank"><button class="Manrope">Voir Plus</button></a>
+                    <button class="Manrope">Voir Plus</button>
                 </div>
             </div>
         </section>
@@ -225,6 +225,30 @@
                 navToggle.textContent = '☰';
             });
         });
+
+        // ============================================
+        // HIDE NAV ON SCROLL DOWN / SHOW ON SCROLL UP
+        // ============================================
+        const mainNav = document.getElementById('mainNav');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentY = window.scrollY;
+            const delta = currentY - lastScrollY;
+
+            if (delta > 10 && currentY > 80) {
+                // Descente rapide → cache la nav
+                mainNav.classList.add('hidden');
+                // Ferme aussi le menu mobile si ouvert
+                navMenu.classList.remove('open');
+                navToggle.textContent = '☰';
+            } else if (delta < -6) {
+                // Remontée → réaffiche la nav
+                mainNav.classList.remove('hidden');
+            }
+
+            lastScrollY = currentY;
+        }, { passive: true });
 
         // ============================================
         // GÉNÉRATION DES ÉTOILES
